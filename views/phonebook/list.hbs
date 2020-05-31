@@ -1,0 +1,35 @@
+<center><h3> Contacts List</h3>
+<h4><a class="btn btn-secondary" href="/phonebook"><i class="fa fa-plus"></i> Create New</a></h4>
+<form class="ui-filterable">
+      <input id="myFilter" placeholder = "search" data-type="search">
+    </form>
+    </center>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Alternate Email</th>
+            <th>Mobile</th>
+            <th>Alternate Mobile</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{phonebook.fullName}}</td>
+            <td>{{phonebook.email}}</td>
+            <td>{{phonebook.altEmail}}</td>
+            <td>{{phonebook.mobile}}</td>
+            <td>{{phonebook.altMobile}}</td>
+            <td>{{phonebook.city}}</td>
+            <td>
+                <a href="/phonebook/{{phonebook._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/phonebook/delete/{{phonebook._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

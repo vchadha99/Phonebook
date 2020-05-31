@@ -1,34 +1,34 @@
 <h3>{{viewTitle}}</h3>
 
-<form action="/employee" method="POST" autocomplete="off">
-    <input type="hidden" name="_id" value="{{employee._id}}">
+<form action="/phonebook" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{phonebook._id}}">
     <div class="form-group">
         <label>Full Name</label>
-        <input type="text" class="form-control" name="fullName" placeholder="Full Name">
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{phonebook.fullName}}">
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Email</label>
-            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="text" class="form-control" name="email" placeholder="Email" value="{{phonebook.email}}">
         </div>
         <div class="form-group col-md-6">
             <label>Aternate Email</label>
-            <input type="text" class="form-control" name="altEmail" placeholder="Alernate Email">
+            <input type="text" class="form-control" name="altEmail" placeholder="Alernate Email" value="{{phonebook.altEmail}}">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Mobile</label>
-            <input type="text" class="form-control" name="mobile" placeholder="Mobile">
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{phonebook.mobile}}">
         </div>
         <div class="form-group col-md-6">
             <label>Alternate Mobile</label>
-            <input type="text" class="form-control" name="altMobile" placeholder="Alternate Mobile">
+            <input type="text" class="form-control" name="altMobile" placeholder="Alternate Mobile" value="{{phonebook.altMobile}}">
         </div>
     </div>
     <div class="form-group">
-        <label>City</label>
-        <input type="text" class="form-control" name="city" placeholder="City">
+        <label>Address</label>
+        <input type="text" class="form-control" name="address" placeholder="address" value="{{phonebook.address}}">
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
